@@ -5,7 +5,12 @@ let tl = gsap.timeline({
 
 let tl2 = gsap.timeline({
     repeat: -1, // Repeat indefinitely
-    repeatDelay: 1 // Delay between repetitions (adjust as needed)
+    repeatDelay: 0.5 // Delay between repetitions (adjust as needed)
+});
+
+let tl3 = gsap.timeline({
+    repeat: -1, // Repeat indefinitely
+    repeatDelay: 0.5 // Delay between repetitions (adjust as needed)
 });
 
 function heroBoxesAnimeGsap() {
@@ -82,30 +87,32 @@ function heroBoxesAnimeGsap() {
 function headinAnimeGsap(){
     tl2.to(".top-left .capsule", {
         x: "-270%",
-        duration: 0.5
+        duration: 1.5
     })
-    tl2.to(".top-left h2", {
+    tl3.to(".top-left h2", {
         x: "50%",
-        duration: 0.5
+        duration: 1.5
     })
     tl2.to(".top-left .capsule", {
         x: "0%",
-        duration: 0.5
+        duration: 1.5
     })
-    tl2.to(".top-left h2", {
+    tl3.to(".top-left h2", {
         x: "0%",
-        duration: 0.5
+        duration: 1.5
     })
 }
 
-gsap.to("#bottom",{
-    scale:1,
-    scrollTrigger:{
-        target:"#bottom",
-        scroller:"#main",
-        markers:true
-    }
-})
+// gsap.to("#bottom",{
+//     scale:1,
+//     scrollTrigger:{
+//         target:"#bottom",
+//         scroller:"main",
+//         markers:true,
+//         start:"top 70%",
+//         end:"bottom 100%"
+//     }
+// })
 
 headinAnimeGsap();
 heroBoxesAnimeGsap();

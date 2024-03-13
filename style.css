@@ -87,6 +87,8 @@ main{
     font-weight: 100;
     /* line-height: 1.5; */
     display: inline-block;
+    position: relative;
+    /* z-index: 2; */
 }
 
 #hero-section .top-left .capsule{
@@ -122,7 +124,7 @@ main{
     background-color: #fff;
     margin: 5vw auto;
     position: relative;
-    scale: 0;
+    /* scale: 0; */
 }
 
 #bottom video{
